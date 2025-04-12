@@ -9,5 +9,5 @@ def hello(name: str = "World"):
 
 # Goodbye endpoint
 @app.get("/goodbye")
-def goodbye():
-    return "Goodbye, World!"
+def goodbye(name: str = "World"):
+    return f"Goodbye, {name}!"
