@@ -18,3 +18,10 @@ def test_goodbye():
     assert response.status_code == 200, response.text
     data = response.json()
     assert data == "Goodbye, World!"
+
+# Goodbye endpoint with name parameter
+def test_goodbye_name():
+    response = client.get("/goodbye?name=Test")
+    assert response.status_code == 200, response.text
+    data = response.json()
+    assert data == "Goodbye, Test!"
